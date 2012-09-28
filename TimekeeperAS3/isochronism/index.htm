@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+	<title>Animated Main Preloader in AS3</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    <!-- Stretch SWF full screen. Fixes a problem with resizing on Firefox -->
+	<style type="text/css">
+        /* hide from ie on mac */
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #flashcontent {
+            height: 100%;
+        }
+        /* end hide */
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            font: .8em/1.3em verdana,arial,helvetica,sans-serif;
+        }
+    </style>
+
+    <!-- SWFObject embed by Geoff Stearns & Bobby Van Der Sluis: http://code.google.com/p/swfobject/ -->
+    <script type="text/javascript" src="swfobject.js"></script>
+
+    <script type="text/javascript">
+        var flashvars = {};
+        var params = {};
+        var attributes = {};
+        attributes.id = "app";
+        swfobject.embedSWF("isochronism.swf", "flashcontent", "100%", "100%", "9.0.0", false, flashvars, params, attributes);
+    </script>
+
+</head>
+
+<body>
+
+    <div id="flashcontent">
+        <a href="http://www.adobe.com/go/getflashplayer">
+            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+        </a>
+    </div>
+
+</body>
+
+</html>
